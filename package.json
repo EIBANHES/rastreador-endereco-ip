@@ -1,0 +1,15 @@
+{
+  "name": "rastreador-endereco-ip",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
