@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #cccccc;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+#ip-address {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/images/pattern-bg-desktop.png');
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  padding-top: 3rem;
+}
+
+#ip-address h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#ip-address .input-content input {
+  position: relative;
+  width: 40rem;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  outline: none;
+  height: 5rem;
+}
+
+#ip-address .input-content input::placeholder {
+  letter-spacing: .1rem;
+  color: #ccc6c6;
+}
+
+#ip-address .input-content button {
+  position: absolute;
+  border: none;
+  height: 5rem;
+  width: 5rem;
+  background-color: black;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+/* card ips */
+
+#ip-address .card-ips {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 15rem;
+  background-color: white;
+  width: 75%;
+  bottom: -75px;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#ip-address .separator {
+  display: block;
+  height: 100%;
+  width: .1rem;
+  border-right: 1px solid rgb(235, 222, 222);
+}
+
+#ip-address .card-ips .ip-wrapper {
+  padding: 0px 70px;
+}
+
+#ip-address .card-ips .ip-wrapper p {
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+}
+
+#ip-address .card-ips .ip-wrapper h2 {
+  letter-spacing: .1rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
