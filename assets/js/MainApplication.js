@@ -5,6 +5,7 @@ export class MainApplication {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
+    this.update()
   }
 
   load() {
@@ -24,8 +25,6 @@ export class MainApplication {
   }
 }
 
-
-
 //Aqui conterá toda parte de eventos e carregamento de conteudo
 export class MainApplicationView extends MainApplication {
   constructor(root) {
@@ -40,6 +39,10 @@ export class MainApplicationView extends MainApplication {
       const { value } = this.ipAdress.querySelector('.input-content input')
       this.add(value)
     }
+  }
+
+  updateCard() {
+
   }
 
 }
