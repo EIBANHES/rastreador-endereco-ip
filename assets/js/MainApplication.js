@@ -4,23 +4,22 @@ import { MapView } from "./MapView.js";
 export class MainApplication {
   constructor() {
     this.load()
+    this.ipAddressField = document.querySelector('.ipAddressField')
+    this.locationInput = document.querySelector('.locationInput')
+    this.timezoneInput = document.querySelector('.timezoneInput')
+    this.ispInput = document.querySelector('.ispInput')
+    this.map = new MapView()
   }
 
   async load() {
     const request = new IpGeolocation();
     try {
       const { ip, country, region, city, lat, lng, timezone, isp } = await request.fetchAddress('');
-      const ipAddressField = document.querySelector('.ipAddressField')
-      ipAddressField.textContent = ip
-      const locationInput = document.querySelector('.locationInput')
-      locationInput.textContent = `${city}, ${region}`
-      const timezoneInput = document.querySelector('.timezoneInput')
-      timezoneInput.textContent = `UTC${timezone}`
-      const ispInput = document.querySelector('.ispInput')
-      ispInput.textContent = `${isp}`
-
-      const map = new MapView()
-      map.loadMap(lat, lng)
+      this.ipAddressField.textContent = ip
+      this.locationInput.textContent = `${city}, ${region}`
+      this.timezoneInput.textContent = `UTC${timezone}`
+      this.ispInput.textContent = `${isp}`
+      this.map.loadMap(lat, lng)
 
       return { ip, country, region, city, lat, lng, timezone, isp };
     } catch (error) {
