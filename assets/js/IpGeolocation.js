@@ -15,4 +15,13 @@ export class IpGeolocation {
       throw error;
     }
   }
+
+  async getGeoLocation(ipContent) {
+    const request = new IpGeolocation()
+    try {
+      return await request.fetchAddress(ipContent)
+    } catch (e) {
+      throw new Error('Erro! Tente novamente')
+    }
+  }
 }
