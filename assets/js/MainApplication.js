@@ -9,7 +9,7 @@ export class MainApplication {
   async load() {
     const request = new IpGeolocation();
     try {
-      const { ip, country, region, city, lat, lng, timezone, isp } = await request.fetchAddress();
+      const { ip, country, region, city, lat, lng, timezone, isp } = await request.fetchAddress('');
       const ipAddressField = document.querySelector('.ipAddressField')
       ipAddressField.textContent = ip
       const locationInput = document.querySelector('.locationInput')
