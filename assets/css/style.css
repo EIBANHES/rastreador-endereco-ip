@@ -80,11 +80,7 @@ body {
   border-right: 1px solid rgb(235, 222, 222);
 }
 
-#ip-address .card-ips .ip-wrapper {
-  padding: 0px 70px;
-}
-
-#ip-address .card-ips .ip-wrapper p {
+#ip-address .card-ips .content-wrapper p {
   color: gray;
   font-size: 1.5rem;
   font-weight: bold;
@@ -92,7 +88,7 @@ body {
   margin-bottom: 1rem;
 }
 
-#ip-address .card-ips .ip-wrapper h2 {
+#ip-address .card-ips .content-wrapper h2 {
   letter-spacing: .1rem;
   font-weight: bold;
   font-size: 2.5rem;
