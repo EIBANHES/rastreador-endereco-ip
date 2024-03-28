@@ -13,7 +13,7 @@ export class MainApplication {
   }
 
   async load() {
-    await this.fetchIpGeolocation('')
+   return await this.fetchIpGeolocation('')
   }
 
   async fetchIpGeolocation(ipContent) {
