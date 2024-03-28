@@ -20,15 +20,15 @@ export class MainApplication {
     try {
       this.searchIp()
       const methodGetIp = new IpGeolocation()
-      const { ip, country, region, city, lat, lng, timezone, isp } = await methodGetIp.getGeoLocation(ipContent);
-      this.updateCards(ip, country, region, city, timezone, isp)
+      const { ip, region, city, lat, lng, timezone, isp } = await methodGetIp.getGeoLocation(ipContent);
+      this.updateCards(ip, region, city, timezone, isp)
       this.map.loadMap(lat, lng)
     } catch (error) {
       console.error('Error updating card:', error);
     }
   }
 
-  updateCards(ip, city, region, timezone, isp) {
+  updateCards(ip, region, city, timezone, isp) {
     this.ipAddressField.textContent = ip
     this.locationInput.textContent = `${city}, ${region}`
     this.timezoneInput.textContent = `UTC${timezone}`
