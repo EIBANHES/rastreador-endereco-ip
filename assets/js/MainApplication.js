@@ -28,8 +28,6 @@ export class MainApplication {
     }
   }
 
-
-
   updateCards(ip, city, region, timezone, isp) {
     this.ipAddressField.textContent = ip
     this.locationInput.textContent = `${city}, ${region}`
@@ -44,6 +42,5 @@ export class MainApplication {
       inputSearch = inputSearch.value ? this.fetchIpGeolocation(inputSearch.value) : this.fetchIpGeolocation('')
     })
   }
-
 
 }
